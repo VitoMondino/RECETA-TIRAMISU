@@ -1,0 +1,102 @@
+:root {
+    --color-primary: #0066cc;
+    --color-secondary: #333;
+    --color-tertiary: #555;
+    --color-quaternary: #666;
+    --color-background: #f8f8f8;
+    --color-accent: #ddd;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+}
+
+h1 {
+    color: var(--color-secondary);
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+h3 {
+    color: var(--color-tertiary);
+}
+
+p {
+    color: var(--color-quaternary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    text-decoration: underline;
+    color: darken(var(--color-primary), 10%); 
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid var(--color-accent);
+    padding: 8px;
+    text-align: left;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+ol {
+    counter-reset: steps;
+    margin-bottom: 20px;
+}
+
+ol li {
+    position: relative;
+    counter-increment: steps;
+    margin-bottom: 10px;
+}
+
+ol li::before {
+    content: counter(steps);
+    position: absolute;
+    left: -2em;
+    top: 0;
+    background-color: var(--color-primary);
+    color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+}
